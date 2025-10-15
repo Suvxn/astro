@@ -46,7 +46,7 @@ const Contact = () => {
     { name: 'Instagram', icon: <FaInstagram />, url: 'https://www.instagram.com/astronitr/', color: '#E4405F' },
     { name: 'X (Twitter)', icon: <FaXTwitter />, url: 'https://twitter.com/', color: '#1DA1F2' },
     { name: 'LinkedIn', icon: <FaLinkedin />, url: 'https://www.linkedin.com/school/national-institute-of-technology-rourkela/', color: '#0A66C2' },
-    { name: 'YouTube', icon: <FaYoutube />, url: 'https://www.youtube.com/', color: '#FF0000' },
+   
     { name: 'Email', icon: <FaEnvelope />, url: 'mailto:astronitr@nitrkl.ac.in', color: '#6C63FF' }
   ];
 
@@ -286,20 +286,7 @@ const Contact = () => {
           </div>
         </div>
 
-        {/* Map Section */}
-        <div className="map-section">
-          <h2 className="section-title slide-in-left">Find Us</h2>
-          <div className="map-container slide-in-up smooth-hover">
-            <div className="map-placeholder">
-              <div className="map-icon">🗺️</div>
-              <h3>NIT Rourkela Campus</h3>
-              <p>Rourkela, Odisha, India</p>
-              <div className="map-coordinates">
-                <span>22.2535° N, 84.9014° E</span>
-              </div>
-            </div>
-          </div>
-        </div>
+  
       </div>
     </div>
   );
