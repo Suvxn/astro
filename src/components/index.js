@@ -1,0 +1,11 @@
+// Export all components from a central location
+export { default as Header } from './Header';
+export { default as Hero } from './Hero';
+export { default as Team } from './Team';
+export { default as Gallery } from './Gallery';
+export { default as Astronomica } from './Astronomica';
+export { default as Blog } from './Blog';
+export { default as Contact } from './Contact';
+export { default as Footer } from './Footer';
+export { default as TypingAnimation } from './TypingAnimation';
+export { default as AdvancedTypingAnimation } from './AdvancedTypingAnimation';

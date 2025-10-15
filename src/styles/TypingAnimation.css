@@ -1,0 +1,159 @@
+.typing-animation {
+  width: 100%;
+  text-align: left;
+}
+
+.typing-text {
+  font-family: 'Arial', sans-serif;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: #ffffff;
+  margin: 0;
+  min-height: 1.6em;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+.typing-cursor {
+  display: inline-block;
+  font-weight: bold;
+  color: #ff6b6b;
+  animation: cursorPulse 1s ease-in-out infinite;
+  margin-left: 2px;
+}
+
+.typing-cursor.visible {
+  opacity: 1;
+}
+
+.typing-cursor.hidden {
+  opacity: 0;
+}
+
+@keyframes cursorPulse {
+  0%, 50% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  51%, 100% {
+    opacity: 0.3;
+    transform: scale(0.9);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .typing-text {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .typing-text {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+}
+
+@media (max-width: 480px) {
+  .typing-text {
+    font-size: 0.9rem;
+    line-height: 1.4;
+  }
+}
+
+/* Animation for when typing completes */
+.typing-animation.completed .typing-cursor {
+  animation: none;
+  opacity: 1;
+}
+
+/* Special effects for cosmic theme */
+.typing-text::selection {
+  background-color: rgba(255, 107, 107, 0.3);
+  color: #ffffff;
+}
+
+/* Add a subtle glow effect to the text */
+.typing-text {
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+/* Pulse effect for the entire typing container */
+.typing-animation {
+  animation: subtlePulse 4s ease-in-out infinite;
+}
+
+@keyframes subtlePulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.002);
+  }
+}
+
+/* Advanced typing animation styles */
+.typing-animation.advanced {
+  position: relative;
+}
+
+.typing-animation.advanced .typing-cursor {
+  background: linear-gradient(45deg, #ff6b6b, #4ecdc4, #45b7d1, #96ceb4);
+  background-size: 400% 400%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradientShift 2s ease-in-out infinite;
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Typing sound effect simulation with visual cues */
+.typing-animation.advanced .typing-text {
+  position: relative;
+}
+
+.typing-animation.advanced .typing-text::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #ff6b6b, transparent);
+  opacity: 0;
+  animation: typingLine 0.5s ease-out;
+}
+
+@keyframes typingLine {
+  0% {
+    opacity: 0;
+    transform: scaleX(0);
+  }
+  50% {
+    opacity: 1;
+    transform: scaleX(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scaleX(0);
+  }
+}
+
+/* Enhanced glow effect for typing text */
+.typing-animation.advanced .typing-text {
+  text-shadow: 
+    0 0 5px rgba(255, 255, 255, 0.1),
+    0 0 10px rgba(255, 107, 107, 0.2),
+    0 0 15px rgba(255, 255, 255, 0.1);
+}
